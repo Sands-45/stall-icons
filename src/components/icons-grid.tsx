@@ -24,7 +24,7 @@ const IconsGrid = React.memo(() => {
   // JSX Code =================
   return (
     <div
-      className="mt-6 w-full h-full pr-2 overflow-hidden overflow-y-auto grid gap-4
+      className="mt-6 w-full h-full pr-2 overflow-hidden overflow-y-auto grid auto-rows-min gap-4
        grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6"
     >
       {filtered_icons.map((icon: IconReference) => {
