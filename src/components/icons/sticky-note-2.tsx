@@ -1,4 +1,4 @@
-import { StallIconType } from "../icons-types";
+import { StallIconType } from "@/types/icons-types";
 
 const StStickyNote2 = ({
   size = 20,

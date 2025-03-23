@@ -1,4 +1,4 @@
-import { StallIconType } from "../icons-types";
+import { StallIconType } from "@/types/icons-types";
 
 const StPaintBoard = ({
   size = 20,

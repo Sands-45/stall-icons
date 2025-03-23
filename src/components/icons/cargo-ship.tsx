@@ -1,4 +1,4 @@
-import { StallIconType } from "../icons-types";
+import { StallIconType } from "@/types/icons-types";
 
 const StCargoShip = ({
   size = 20,
