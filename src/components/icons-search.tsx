@@ -14,7 +14,8 @@ const IconsSearch = () => {
       }}
       placeholder="Search icons ..."
       className="h-9 w-44 px-3 text-xs text-zinc-700 placeholder:text-zinc-400 rounded-lg bg-zinc-50
-       border border-zinc-200 focus-within:border-cyan-800/50 focus-within:ring-1 focus-within:ring-cyan-800/50"
+       border border-zinc-200 focus-within:border-cyan-800/50 focus-within:ring-1
+        focus-within:ring-cyan-800/50 transition-all"
     />
   );
 };

@@ -1,5 +1,5 @@
 import TopNav from "./components/top-nav";
-import IconSearch from "./components/icon-search";
+import IconSearch from "./components/icons-search";
 import IconsGrid from "./components/icons-grid";
 
 function App() {

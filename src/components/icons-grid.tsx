@@ -3,7 +3,9 @@ import { IconReference } from "@/types/icons-types";
 import { toPureString } from "@/utils/helpers";
 import { useDebounce } from "@uidotdev/usehooks";
 import React from "react";
+import ReactDOMServer from "react-dom/server";
 import { useSearchParams } from "react-router";
+import { toast } from "sonner";
 
 const IconsGrid = React.memo(() => {
   const [searchParams] = useSearchParams();
@@ -27,6 +29,13 @@ const IconsGrid = React.memo(() => {
       {filtered_icons.map((icon: IconReference) => {
         return (
           <div
+            onClick={() => {
+              const svgMarkup = ReactDOMServer.renderToStaticMarkup(
+                <icon.icon />
+              );
+              navigator.clipboard.writeText(svgMarkup);
+              toast.success("Svg copied to clipboard");
+            }}
             className="col-span-1 aspect-square rounded-xl bg-zinc-50 p-3 border border-zinc-100 flex
              flex-col justify-center items-center gap-4 cursor-pointer hover:shadow transition-all shrink-0"
           >
