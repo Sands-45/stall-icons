@@ -1,6 +1,7 @@
 import { all_icons } from "@/reference";
 import { IconReference } from "@/types/icons-types";
 import { toPureString } from "@/utils/helpers";
+import { customToast } from "@/utils/resusable-objects";
 import { useDebounce } from "@uidotdev/usehooks";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
@@ -29,18 +30,23 @@ const IconsGrid = React.memo(() => {
       {filtered_icons.map((icon: IconReference) => {
         return (
           <div
+            key={icon.name}
             onClick={() => {
               const svgMarkup = ReactDOMServer.renderToStaticMarkup(
                 <icon.icon />
               );
               navigator.clipboard.writeText(svgMarkup);
-              toast.success("Svg copied to clipboard");
+              toast.success("Svg copied to clipboard", customToast);
             }}
             className="col-span-1 aspect-square rounded-xl bg-zinc-50 p-3 border border-zinc-100 flex
-             flex-col justify-center items-center gap-4 cursor-pointer hover:shadow transition-all shrink-0"
+             flex-col justify-center items-center gap-4 cursor-pointer hover:opacity-80 transition-all shrink-0"
           >
             <div className="h-full w-full flex flex-col items-center justify-center gap-4 overflow-hidden">
-              <icon.icon size={25} className="text-zinc-500" />
+              <icon.icon
+                size={25}
+                strokeWidth={1.5}
+                className="text-zinc-500"
+              />
               <span
                 className="text-[11px] text-center font-medium text-zinc-500 whitespace-nowrap
               truncate px-4 overflow-hidden w-full"

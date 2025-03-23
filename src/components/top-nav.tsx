@@ -6,7 +6,7 @@ const TopNav = () => {
          gap-4 border-b border-zinc-100 px-6"
       >
         <span className="text-sm text-zinc-500 font-medium">
-          Components / icons
+          Stall / icons
         </span>
         <span className="text-xs text-zinc-500 font-medium font-mono">
           Last updated : 23 Sun March 25

@@ -29,7 +29,7 @@ const StWifiCircle = ({
       <path
         d="M12 16H12.0064"
         stroke={color}
-        stroke-width="2"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
